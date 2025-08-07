@@ -1,2 +1,2 @@
 # tic-tac-toe
-my first js project
+my first javascript project
