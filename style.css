@@ -36,6 +36,7 @@ body {
     border: none;
     box-shadow: 0 0 1rem rgba(00, 00, 00, 0.5);
     font-size: 8vmin;
+    color: black;
 }
 
 #reset-btn {
