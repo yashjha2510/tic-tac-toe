@@ -16,6 +16,13 @@ const winpatterns = [
     [6, 7, 8]
 ];
 
+// disable all the buttons after winning
+const disableBoxes = () => {
+    for (let box of boxes) {
+        box.disabled = true;
+    }
+}
+
 // function to check winner
 const checkwinner = () => {
     for (let pattern of winpatterns) {
@@ -37,6 +44,7 @@ const checkwinner = () => {
         if (pos1val != "" && pos2val != "" && pos3val != "") {
             if (pos1val === pos2val && pos2val === pos3val) {
                 console.log("winner", pos1val);
+                disableBoxes();
             }
         }
     } 
