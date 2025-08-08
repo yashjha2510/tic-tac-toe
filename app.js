@@ -16,17 +16,48 @@ const winpatterns = [
     [6, 7, 8]
 ];
 
+// function to check winner
+const checkwinner = () => {
+    for (let pattern of winpatterns) {
+        // console.log(pattern[0], pattern[1], pattern[2]);
+        // console.log(boxes[pattern[0]], boxes[pattern[1]], boxes[pattern[2]]);
+        // access the innertext of every position :-
+        // console.log(
+        //     boxes[pattern[0]].innerText,
+        //     boxes[pattern[1]].innerText, 
+        //     boxes[pattern[2]].innerText
+        // );
+        
+        //store every position in an variable
+        let pos1val = boxes[pattern[0]].innerText;
+        let pos2val = boxes[pattern[1]].innerText; 
+        let pos3val = boxes[pattern[2]].innerText;
+
+        //check whose win
+        if (pos1val != "" && pos2val != "" && pos3val != "") {
+            if (pos1val === pos2val && pos2val === pos3val) {
+                console.log("winner", pos1val);
+            }
+        }
+    } 
+}
+
 // function that run for clicking
 function boxclick(event) {
     console.log("box was clicked");
     if(turnO === true) {
         event.target.innerText = "O";
+        event.target.style.backgroundColor = "pink";
         turnO = false;
     }
     else {
         event.target.innerText = "X";
+        event.target.style.backgroundColor = "teal";
         turnO = true;
     }
+    event.target.disabled = true;
+
+    checkwinner();
 }
 
 // perform the boxclick function for every box
