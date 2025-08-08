@@ -48,3 +48,21 @@ body {
     font-size: 3vmin;
     box-shadow: 0 0 1rem rgba(00, 00, 00, 0.5);
 }
+
+#new-game-btn {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    font-weight: bold;
+    font-size: 3vmin;
+    box-shadow: 0 0 1rem rgba(00, 00, 00, 0.5);
+}
+
+#msg {
+    /* background-color: white; */
+    font-size: 8vmin;
+}
+
+.hide {
+    display: none;
+}
