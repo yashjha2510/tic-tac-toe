@@ -10,7 +10,7 @@ body {
 
 .container {
     /* background-color: red; */
-    height: 70vh;
+    height: 55vh;
     /* width: 50vw;  */
     display: flex; 
     /* flex-wrap: wrap; */
@@ -19,8 +19,8 @@ body {
 }
 
 .game {
-    height: 60vmin;
-    width: 60vmin;
+    height: 50vmin;
+    width: 50vmin;
     /* background-color: green; */
     display: flex;
     flex-wrap: wrap;
@@ -30,8 +30,8 @@ body {
 } 
 
 .box {
-    height: 18vmin;
-    width: 18vmin;
+    height: 15vmin;
+    width: 15vmin;
     border-radius: 1rem;
     border: none;
     box-shadow: 0 0 1rem rgba(00, 00, 00, 0.5);
@@ -65,4 +65,19 @@ body {
 
 .hide {
     display: none;
+}
+
+footer {
+    position: fixed;
+    margin-bottom: 2px;
+    width: 100%;
+    /* background-color: white; */
+    bottom: 0;
+    padding: 10px 0;
+}
+
+#footer-text {
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
 }
