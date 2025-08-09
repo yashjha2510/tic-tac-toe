@@ -1,6 +1,6 @@
 let boxes = document.querySelectorAll(".box");
 let resetbtn = document.querySelector("#reset-btn");
-let newgamebtn = document.querySelector("#new-game-btn");
+// let newgamebtn = document.querySelector("#new-game-btn");
 let msgcontainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
@@ -49,10 +49,13 @@ const disableBoxes = () => {
     }
 }
 
+let gameover = true;
 // function to show winner 
 const showwinner = (winner) => {
     msgcontainer.classList.remove("hide");
     msg.innerText = `Congratulations!!, Winner ${winner}`;
+    resetbtn.innerText = "New Game";
+    gameover = false;
 } 
 
 // function to check winner
@@ -83,3 +86,22 @@ const checkwinner = () => {
     } 
 }
 
+const enableBoxes = () => {
+    for (let box of boxes) {
+        box.disabled = false;
+        box.innerText = "";
+        box.style.backgroundColor = "white";
+    }
+}
+
+// reset game btn 
+const resetgame = () => {
+    turnO = true;
+    enableBoxes();
+    msgcontainer.classList.add("hide");
+    gameover = false;
+    resetbtn.innerText = "Reset Game";
+}
+
+resetbtn.addEventListener("click", resetgame);
+// newgamebtn.addEventListener("click", resetgame);
